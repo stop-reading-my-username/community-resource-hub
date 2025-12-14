@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Katy Community Resource Hub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <h1 class="logo">Katy Community Resource Hub</h1>
+        <p class="tagline">Find help, programs, and support in one place.</p>
+      </div>
+
+      <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="reference.html">Reference Page</a>
+        <a href="#directory">Directory</a>
+        <a href="#submit">Suggest a Resource</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>Quickly locate trusted community resources.</h2>
+          <p>
+            This website highlights services and organizations available to residents in and near Katy, Texas.
+            Use the directory to search and filter by category, then click links to learn more.
+          </p>
+          <a href="#directory" class="btn">Explore the Directory</a>
+        </div>
+
+        <div class="hero-box">
+          <h3>Quick Contacts</h3>
+          <ul class="quick-list">
+            <li><strong>Emergency:</strong> 911</li>
+            <li><strong>Community Help:</strong> 2-1-1</li>
+            <li><strong>Crisis Support:</strong> 988</li>
+            <li><strong>Poison Control:</strong> 1-800-222-1222</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section id="highlights" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Resources</h2>
+          <p class="muted">
+            A few services that are commonly needed or frequently requested.
+          </p>
+        </div>
+        <div class="card-grid" id="highlight-grid"></div>
+      </div>
+    </section>
+
+    <!-- Directory -->
+    <section id="directory" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Community Resource Directory</h2>
+          <p class="muted">
+            Search by keyword and filter by category or audience.
+          </p>
+          <p id="results-count" class="results-count"></p>
+        </div>
+
+        <div class="filters">
+          <input id="search" type="text" placeholder="Search by name, keyword, or tag..." />
+          <select id="filter-category">
+            <option value="">All Categories</option>
+            <option value="Food & Basic Needs">Food & Basic Needs</option>
+            <option value="Health & Wellness">Health & Wellness</option>
+            <option value="Education & Tutoring">Education & Tutoring</option>
+            <option value="Youth & Recreation">Youth & Recreation</option>
+            <option value="Housing & Financial">Housing & Financial</option>
+          </select>
+          <select id="filter-audience">
+            <option value="">All Audiences</option>
+            <option value="Everyone">Everyone</option>
+            <option value="Youth">Youth</option>
+            <option value="Families">Families</option>
+            <option value="Seniors">Seniors</option>
+          </select>
+        </div>
+
+        <div class="card-grid" id="resource-list"></div>
+      </div>
+    </section>
+
+    <!-- Suggest -->
+    <section id="submit" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Suggest a New Resource</h2>
+          <p class="muted">
+            Use this form to suggest a new organization or service to add to the directory.
+          </p>
+        </div>
+
+        <form id="resource-form" class="resource-form">
+          <div class="form-row">
+            <label for="res-name">Resource Name*</label>
+            <input id="res-name" type="text" required />
+          </div>
+
+          <div class="form-row">
+            <label for="res-category">Category*</label>
+            <select id="res-category" required>
+              <option value="">Select a category</option>
+              <option value="Food & Basic Needs">Food & Basic Needs</option>
+              <option value="Health & Wellness">Health & Wellness</option>
+              <option value="Education & Tutoring">Education & Tutoring</option>
+              <option value="Youth & Recreation">Youth & Recreation</option>
+              <option value="Housing & Financial">Housing & Financial</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="res-website">Website (optional)</label>
+            <input id="res-website" type="url" placeholder="https://example.org" />
+          </div>
+
+          <div class="form-row">
+            <label for="res-contact">Contact Info (optional)</label>
+            <input id="res-contact" type="text" placeholder="Phone, email, or address" />
+          </div>
+
+          <div class="form-row">
+            <label for="res-description">Short Description*</label>
+            <textarea id="res-description" rows="4" required></textarea>
+          </div>
+
+          <button class="btn" type="submit">Submit Resource</button>
+          <p id="form-message" class="form-message"></p>
+        </form>
+
+        <p class="muted small-note">
+          Note: Suggested resources appear as “Pending review” on this device/browser.
+        </p>
+      </div>
+    </section>
+
+    <!-- Extras -->
+    <section class="section section-alt">
+      <div class="container extras-grid">
+        <div class="panel">
+          <h2>How to Use This Hub</h2>
+          <ol class="how-to-list">
+            <li>Search or filter to find a resource.</li>
+            <li>Click the website link to view official details.</li>
+            <li>Use contact info to call, email, or visit.</li>
+            <li>Suggest missing resources using the form.</li>
+          </ol>
+        </div>
+
+        <div class="panel">
+          <h2>Tips for Finding the Right Resource</h2>
+          <ul class="bullet-list">
+            <li>Start with 2-1-1 if you’re not sure what you need.</li>
+            <li>Use “Food & Basic Needs” for groceries, clothing, and essentials.</li>
+            <li>Use “Housing & Financial” for rent, utilities, and legal help.</li>
+            <li>Use “Health & Wellness” for clinics and crisis support.</li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <h2>About This Website</h2>
+          <p>
+            This hub is intended to help residents quickly locate community services and support.
+            See the About page for project goals and the Reference Page for sources and documentation.
+          </p>
+          <a class="text-link" href="about.html">Go to About →</a><br />
+          <a class="text-link" href="reference.html">Go to Reference Page →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p>Jordan High School TSA · Webmaster 2025–2026</p>
+      <p><a class="text-link" href="reference.html">Reference Page</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
